@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.app-container {
+    width: 400px;
+    background: white;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.1); /* Contorno con transparencia */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover para resaltar el contenedor */
+.app-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+/* ======= HEADER CON IMAGEN ======= */
+.header-content {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Imagen del encabezado */
+.header-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    padding: 15px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 85%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    padding-left: 35px; /* Espacio para el ícono */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/622/622669.png'); /* Ícono de lupa */
+    background-size: 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+
+/* ======= HISTORIAL ======= */
+.log-list {
+    padding: 15px;
+}
+
+/* Tarjetas de registro */
+.log-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid #007bff;
+}
+
+/* Efecto al pasar el mouse */
+.log-card:hover {
+    transform: scale(1.05);
+    background: #f0f0f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes */
+.log-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #007bff;
+}
+
+/* ======= MENÚ INFERIOR ======= */
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    background: #222;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.menu-item {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-item i {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    font-size: 12px;
+}
+
+/* Efecto hover en los iconos del menú */
+.menu-item:hover {
+    transform: scale(1.1);
+    color: #00c6ff;
+}
