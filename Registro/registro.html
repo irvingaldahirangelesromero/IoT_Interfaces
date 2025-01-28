@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d47a1;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            height: 48px;
+            padding: 0 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .password-group {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .password-group input {
+            flex: 1;
+            height: 48px;
+            padding: 0 12px;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid #ddd;
+            border-right: none;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .password-group button {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #ddd;
+            border-radius: 0 5px 5px 0;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .password-group button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #0d47a1;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1565c0;
+        }
+
+        .form-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 60%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="/src/signUp.png" alt="Icono de Registro">
+        </div>
+        <div class="form-header">
+            <h2>Registro</h2>
+        </div>
+
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Nombre Completo" class="input-field" required>
+            <input type="tel" name="phone" placeholder="Número Telefónico" class="input-field" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" class="input-field" required>
+
+            <div class="password-group">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <button type="button" onclick="togglePasswordVisibility('password')">👁</button>
+            </div>
+
+            <div class="password-group">
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirmar Contraseña"
+                    required>
+                <button type="button" onclick="togglePasswordVisibility('confirm-password')">👁</button>
+            </div>
+
+            <button type="submit" class="submit-btn">Registrarse</button>
+        </form>
+    </div>
+
+    <script>
+        function togglePasswordVisibility(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            const fieldType = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", fieldType);
+        }
+    </script>
+
+</body>
+
+</html>
